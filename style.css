@@ -6,16 +6,19 @@ body {
 .body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  height: 90vh;
 }
 .body__heading {
   width: 80%;
+  height: 20vh;
   display: flex;
   justify-content: flex-start;
+  align-items: flex-end;
 }
 .body__heading__text {
-  font-size: 1.4em;
+  font-size: 1.6em;
 }
 .body .translator {
   display: flex;
@@ -27,14 +30,43 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  gap: 20px;
   width: 100%;
 }
 .body .translator__container__text {
+  display: flex;
   width: 80%;
 }
-.body .translator__container__text textarea {
-  height: 20vh;
+.body .translator__container__text p {
+  height: 25vh;
   width: 100%;
+  border: 2px solid #FF9D2E;
+  border-radius: 10px;
+}
+.body .translator__control {
+  display: flex;
+}
+.body .translator__control__btn {
+  width: 120px;
+  height: 40px;
+  font-size: 1.2em;
+  background-color: white;
+  border: 1px solid #FF9D2E;
+  border-radius: 10px;
+}
+
+.copyright {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  height: 5vh;
+}
+.copyright__text {
+  font-size: 1.1em;
+  display: flex;
+  justify-content: flex-start;
+  width: 80%;
 }
 
 /*# sourceMappingURL=style.css.map */
