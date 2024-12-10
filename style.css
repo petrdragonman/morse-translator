@@ -1,3 +1,40 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  height: 98vh;
+}
 
+.body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.body__heading {
+  width: 80%;
+  display: flex;
+  justify-content: flex-start;
+}
+.body__heading__text {
+  font-size: 1.4em;
+}
+.body .translator {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 80%;
+}
+.body .translator__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+.body .translator__container__text {
+  width: 80%;
+}
+.body .translator__container__text textarea {
+  height: 20vh;
+  width: 100%;
+}
 
 /*# sourceMappingURL=style.css.map */
