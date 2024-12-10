@@ -8,22 +8,28 @@
     <script src="./script.js" defer></script>
 </head>
 <body>
-    <main>
-        <section class="heading">morse-translator</section>
-        <section>
-            <section class="translater">
-                <div>
-                    <textarea name="english" id="english"></textarea>
-                </div>
-                <div>
-                    <textarea name="morse" id="morse"></textarea>
-                </div>
+    <main class="body">
+        <section class="body__heading">
+            <p class="body__heading__text">morse-translator</p>
+        </section>
+        <section class="translator">
+            <section class="translator__container">
+                <article class="translator__container__text">
+                    <p name="english" id="english"></p>
+                </article>
+                <article class="translator__container__text">
+                    <p name="morse" id="morse"></p>
+                </article>
             </section>
-            <section class="control"></section>
+            <section class="translator__control">
+                <button class="translator__control__btn">Clear</button>
+            </section>
         </section>
     </main>
     <footer>
-        <article class="copyright">Petr Valouch copyright 2024</article>
+        <section class="copyright">
+            <article class="copyright__text">Petr Valouch copyright 2024</article>
+        </section>
     </footer>
 </body>
 </html>
