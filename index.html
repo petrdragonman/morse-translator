@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><morse-translator></morse-translator></title>
     <link rel="stylesheet" href="style.css">
-    <script src="./script.js" defer></script>
+    <script src="./script.js" type="module" defer></script>
 </head>
 <body>
     <main class="body">
@@ -13,13 +13,15 @@
             <p class="body__heading__text">morse-translator</p>
         </section>
         <section class="translator">
-            <section class="translator__container">
-                <article class="translator__container__text">
-                    <p name="english" id="english"></p>
-                </article>
-                <article class="translator__container__text">
-                    <p name="morse" id="morse"></p>
-                </article>
+            <section>
+                <form class="translator__container">
+                    <article class="translator__container__text">
+                        <textarea class="inputArea" name="english" id="english" placeholder="text here ..."></textarea>
+                    </article>
+                    <article class="translator__container__text">
+                        <textarea class="displayArea" name="morse" id="morse" placeholder="morse code here ..." randomly></textarea>
+                    </article>
+                </form>
             </section>
             <section class="translator__control">
                 <button class="translator__control__btn">Clear</button>
