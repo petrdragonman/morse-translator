@@ -5,25 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><morse-translator></morse-translator></title>
     <link rel="stylesheet" href="style.css">
-    <script src="./script.js" defer></script>
+    <script src="./script.js" type="module" defer></script>
 </head>
 <body>
-    <main>
-        <section class="heading">morse-translator</section>
-        <section>
-            <section class="translater">
-                <div>
-                    <textarea name="english" id="english"></textarea>
-                </div>
-                <div>
-                    <textarea name="morse" id="morse"></textarea>
-                </div>
+    <main class="body">
+        <section class="body__heading">
+            <p class="body__heading__text">morse-translator</p>
+        </section>
+        <section class="translator">
+            <section>
+                <form class="translator__container">
+                    <article class="translator__container__text">
+                        <textarea class="inputArea" name="english" id="english" placeholder="type English text here ..."></textarea>
+                    </article>
+                    <article class="translator__container__text">
+                        <textarea class="displayArea" name="morse" id="morse" placeholder="type morse code here ..." randomly></textarea>
+                    </article>
+                </form>
             </section>
-            <section class="control"></section>
+            <section class="translator__control">
+                <button id="btn" class="translator__control__btn">Clear</button>
+            </section>
         </section>
     </main>
     <footer>
-        <article class="copyright">Petr Valouch copyright 2024</article>
+        <section class="copyright">
+            <article class="copyright__text">Petr Valouch copyright 2024</article>
+        </section>
     </footer>
 </body>
 </html>
