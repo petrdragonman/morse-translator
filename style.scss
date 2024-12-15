@@ -1,3 +1,5 @@
+@use "./SCSS/media-queries.scss" as q;
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     height: 98vh;
@@ -26,10 +28,17 @@ body {
         width: 80%;
         &__container {
             display: flex;
-                flex-direction: row;
-                justify-content: center;
+            flex-direction: row;
+            justify-content: center;
+            gap: 20px;
+            width: 100%;
+            @include q.mobile {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
                 gap: 20px;
                 width: 100%;
+            }
             &__text {
                 display: flex;
                 width: 80%;
@@ -61,11 +70,11 @@ body {
             display: flex;
             &__btn {
                 width: 120px;
-                height: 36px;
+                height: 32px;
                 font-size: 1.2em;
                 background-color: white;
                 border: 1px solid #FF9D2E;
-                border-radius: 10px;
+                border-radius: 5px;
             }
         }
     }
