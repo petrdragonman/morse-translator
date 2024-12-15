@@ -34,6 +34,15 @@ body {
   gap: 20px;
   width: 100%;
 }
+@media screen and (max-width: 768px) {
+  .body .translator__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+    width: 100%;
+  }
+}
 .body .translator__container__text {
   display: flex;
   width: 80%;
@@ -65,11 +74,11 @@ body {
 }
 .body .translator__control__btn {
   width: 120px;
-  height: 36px;
+  height: 32px;
   font-size: 1.2em;
   background-color: white;
   border: 1px solid #FF9D2E;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .copyright {
