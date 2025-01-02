@@ -1,8 +1,10 @@
-@use "./SCSS/media-queries.scss" as q;
+@use "./SCSS/partials/media-queries.scss" as q;
+@use "./SCSS/partials/colors" as c;
 
 body {
     font-family: Arial, Helvetica, sans-serif;
     height: 98vh;
+    color: c.$text-color;
 }
 .body {
     display: flex;
@@ -47,21 +49,21 @@ body {
                     height: 200px;
                     padding: 12px 20px;
                     box-sizing: border-box;
-                    border: 1px solid #FF9D2E;
+                    border: 1px solid c.$orange;
                     border-radius: 4px;
-                    background-color: #fdfdfd;
+                    background-color: c.$textAreaBkg;
                     font-size: 16px;
                     resize: none;
                 }
                 textarea:focus {
                     outline: none !important;
-                    border:2px solid #FF9D2E;
-                    box-shadow: 0 0 5px grey; //10
+                    border:2px solid c.$orange;
+                    box-shadow: 0 0 5px c.$textAreaShadow;
                 }
                 p {
                     height: 25vh;
                     width: 100%;
-                    border: 1px solid #FF9D2E;
+                    border: 1px solid c.$orange;
                     border-radius: 10px;
                 }
             }
@@ -73,7 +75,7 @@ body {
                 height: 32px;
                 font-size: 1.2em;
                 background-color: white;
-                border: 1px solid #FF9D2E;
+                border: 1px solid c.$orange;
                 border-radius: 5px;
             }
         }

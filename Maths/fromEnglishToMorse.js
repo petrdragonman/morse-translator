@@ -23,7 +23,7 @@ export const translateEnglishToMorse = () => {
 export const englishInputElement = document.getElementById("english");
 englishInputElement.addEventListener("input", (event) => {
   if(!REG.test(event.target.value)) {
-    event.target.value = event.target.value.replace(/[^A-Za-z. ]/g, "");
+    event.target.value.toUpperCase() = event.target.value.replace(/[^A-Z. ]/g, "");
   }
   translateEnglishToMorse(event.target.value);
 });
