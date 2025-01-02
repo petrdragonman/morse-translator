@@ -1,3 +1,5 @@
+@use "./SCSS/partials/media-queries" as mq;
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     height: 98vh;
@@ -12,10 +14,16 @@ body {
         width: 80%;
         height: 20vh;
         display: flex;
+        flex-direction: row;
         justify-content: flex-start;
         align-items: flex-end;
+        gap: 50px;
         &__text {
+            display: flex;
             font-size: 1.6em;
+        }
+        &__warning {
+            color: #FF9D2E;
         }
     }
     .translator {
@@ -26,10 +34,26 @@ body {
         width: 80%;
         &__container {
             display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 20px;
+            width: 100%;
+            @include mq.laptop {
+                display: flex;
                 flex-direction: row;
                 justify-content: center;
                 gap: 20px;
                 width: 100%;
+            }
+            @include mq.desktop {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+                width: 100%;
+                //border: 1px solid red;
+            }
             &__text {
                 display: flex;
                 width: 80%;
