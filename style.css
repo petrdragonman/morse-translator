@@ -15,11 +15,22 @@ body {
   width: 80%;
   height: 20vh;
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 10px;
 }
 .body__heading__text {
+  display: flex;
   font-size: 1.6em;
+}
+.body__heading__warning {
+  padding: 0px;
+  padding-bottom: 6px;
+  margin: 0px;
+  display: flex;
+  font-size: 1.1em;
+  color: #FF9D2E;
 }
 .body .translator {
   display: flex;

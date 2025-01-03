@@ -16,10 +16,24 @@ body {
         width: 80%;
         height: 20vh;
         display: flex;
-        justify-content: flex-start;
-        align-items: flex-end;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        gap: 10px;
+        //border: 1px solid red;
         &__text {
+            display: flex;
             font-size: 1.6em;
+            //border: 1px solid red;
+        }
+        &__warning {
+            padding: 0px;
+            padding-bottom: 6px;
+            margin: 0px;
+            display: flex;
+            font-size: 1.1em;
+            color: c.$orange;
+            //border: 1px solid red;
         }
     }
     .translator {
