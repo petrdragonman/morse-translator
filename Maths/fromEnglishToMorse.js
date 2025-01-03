@@ -1,4 +1,5 @@
 import data from "../assets/morseCode.json" with {type: "json"};
+import { clearTheTextArea } from "../DOM/clearTextArea.js";
 import displayWarning from "../DOM/displayWarning.js";
 import removeWarning from "../DOM/removeWarning.js";
 
@@ -17,19 +18,23 @@ export const translateEnglishToMorse = () => {
     // regex expression for alphabet only + space + .
     if(inputText) {
       const translatedText = fromEnglishToMorse(inputText);
-      // Display translated text
       outputText.value = translatedText;
+    } else {
+      outputText.value = "";
     }
 };
 
 export const englishInputElement = document.getElementById("english");
 englishInputElement.addEventListener("input", (event) => {
   removeWarning();
+  event.target.value = event.target.value.toUpperCase();
   if(!REG.test(event.target.value)) {
-    const msg = "Please enter alphabets only."
-    displayWarning(msg);
-    event.target.value.toUpperCase() = event.target.value.replace(/[^A-Z. ]/g, "");
-    //const upperText = event.target.value.toUpperCase();
+    if (event.target.value.length > 1) {
+      const msg = "Not a morse character."
+      displayWarning(msg);
+    }
+    event.target.value = event.target.value.replace(/[^A-Za-z. ]/g, "").toUpperCase();
   }
-  translateEnglishToMorse(event.target.value);
+  //translateEnglishToMorse(event.target.value);
+  translateEnglishToMorse();
 });
