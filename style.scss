@@ -18,8 +18,13 @@ body {
         display: flex;
         justify-content: flex-start;
         align-items: flex-end;
+        gap: 30px;
         &__text {
             font-size: 1.6em;
+        }
+        &__warning {
+            font-size: 1.1em;
+            color: c.$orange;
         }
     }
     .translator {

@@ -1,4 +1,6 @@
 import data from "../assets/morseCode.json" with {type: "json"};
+import displayWarning from "../DOM/displayWarning.js";
+import removeWarning from "../DOM/removeWarning.js";
 
 // basic morse code regex
 const MORSEREX = new RegExp("^[.-\s]+$"); 
@@ -14,7 +16,14 @@ export const translateMorseToEnglish = () => {
   const outputText = document.getElementById("english");
   // regex
   const translatedText = fromMorseToEnglish(inputText);
-  outputText.value = translatedText;
+  removeWarning();
+  if (translatedText) {
+    outputText.value = translatedText;
+  } else if (inputText.length > 0) {
+    const msg = "Not a morse character."
+    displayWarning(msg);
+  }
+  
 };
 
 export const morseInputElement = document.getElementById("morse").addEventListener("input", (event) => {

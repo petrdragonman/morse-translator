@@ -1,4 +1,6 @@
 import data from "../assets/morseCode.json" with {type: "json"};
+import displayWarning from "../DOM/displayWarning.js";
+import removeWarning from "../DOM/removeWarning.js";
 
 // regex expression for alphabet only + space + .
 const REG = new RegExp("^[A-Za-z. ]+$");
@@ -22,8 +24,12 @@ export const translateEnglishToMorse = () => {
 
 export const englishInputElement = document.getElementById("english");
 englishInputElement.addEventListener("input", (event) => {
+  removeWarning();
   if(!REG.test(event.target.value)) {
+    const msg = "Please enter alphabets only."
+    displayWarning(msg);
     event.target.value.toUpperCase() = event.target.value.replace(/[^A-Z. ]/g, "");
+    //const upperText = event.target.value.toUpperCase();
   }
   translateEnglishToMorse(event.target.value);
 });
