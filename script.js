@@ -12,4 +12,4 @@ translateEnglishToMorse();
 translateMorseToEnglish();
 
 // to clear the textarea
-clearTheTextArea();
+clearTheTextArea;
